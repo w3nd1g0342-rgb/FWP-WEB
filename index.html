@@ -27,53 +27,56 @@
   <!-- PRODUCTOS -->
   <main class="productos">
 
-    <!-- LIV -->
-    <div class="producto-card energia bienestar">
+    <div class="producto-card energia bienestar" onclick="abrirProducto('liv')">
       <h2>LIV</h2>
-      <p>Apoyo nutricional diario para energía, inmunidad y bienestar general.</p>
-      <a href="https://wa.me/569XXXXXXXX?text=Hola%20quiero%20información%20sobre%20LIV"
-         class="btn" target="_blank">
-        Comprar
-      </a>
+      <p class="precio">$39.990 CLP</p>
+      <p>Energía y apoyo nutricional diario.</p>
+      <button class="btn-secundario">Ver detalles</button>
     </div>
 
-    <!-- RENÖVA+ -->
-    <div class="producto-card bienestar">
+    <div class="producto-card bienestar" onclick="abrirProducto('renova')">
       <h2>RENÖVA+</h2>
-      <p>Apoyo para piel, cabello y uñas. Nutrición desde el interior.</p>
-      <a href="https://wa.me/569XXXXXXXX?text=Hola%20quiero%20información%20sobre%20RENÖVA%2B"
-         class="btn" target="_blank">
-        Comprar
-      </a>
+      <p class="precio">$42.990 CLP</p>
+      <p>Piel, cabello y uñas desde el interior.</p>
+      <button class="btn-secundario">Ver detalles</button>
     </div>
 
-    <!-- E-BOOST -->
-    <div class="producto-card energia">
+    <div class="producto-card energia" onclick="abrirProducto('eboost')">
       <h2>E-BOOST</h2>
-      <p>Incrementa energía, enfoque y rendimiento físico diario.</p>
-      <a href="https://wa.me/569XXXXXXXX?text=Hola%20quiero%20información%20sobre%20E-BOOST"
-         class="btn" target="_blank">
-        Comprar
-      </a>
+      <p class="precio">$36.990 CLP</p>
+      <p>Impulso de energía y enfoque.</p>
+      <button class="btn-secundario">Ver detalles</button>
     </div>
 
-    <!-- 24BURN -->
-    <div class="producto-card peso energia">
+    <div class="producto-card peso energia" onclick="abrirProducto('burn')">
       <h2>24BURN</h2>
-      <p>Apoyo al metabolismo y control de peso durante todo el día.</p>
-      <a href="https://wa.me/569XXXXXXXX?text=Hola%20quiero%20información%20sobre%2024BURN"
-         class="btn" target="_blank">
-        Comprar
-      </a>
+      <p class="precio">$41.990 CLP</p>
+      <p>Apoyo al metabolismo y quema de grasa.</p>
+      <button class="btn-secundario">Ver detalles</button>
     </div>
 
   </main>
 
-  <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarProducto()">×</span>
+
+      <img id="modal-img" src="" alt="">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-precio" class="precio"></p>
+      <p id="modal-desc"></p>
+      <ul id="modal-specs"></ul>
+
+      <a id="modal-wpp" href="#" target="_blank" class="btn">
+        Comprar por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- WHATSAPP FLOTANTE -->
   <a href="https://wa.me/569XXXXXXXX?text=Hola%20quiero%20información%20sobre%20sus%20productos"
-     class="whatsapp-float" target="_blank">
-    💬
-  </a>
+     class="whatsapp-float" target="_blank">💬</a>
 
   <script src="script.js"></script>
 </body>
