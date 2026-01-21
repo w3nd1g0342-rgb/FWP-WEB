@@ -1,96 +1,95 @@
 :root {
-  --principal: #16a34a;   /* Verde bienestar */
-  --secundario: #0f172a;  /* Azul confianza */
-  --fondo: #f8fafc;
-  --texto: #020617;
+  --azul: #0A3D62;
+  --azul-claro: #1E90FF;
+  --negro: #111111;
+  --blanco: #ffffff;
 }
 
+/* GENERAL */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: var(--fondo);
-  color: var(--texto);
+  background-color: var(--blanco);
+  color: var(--negro);
 }
 
-.hero {
-  background: var(--secundario);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
+/* HEADER */
+.header {
+  background-color: var(--negro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 .logo {
-  width: 140px;
-  margin-bottom: 20px;
+  height: 60px;
 }
 
-.btn {
-  display: inline-block;
-  background: var(--principal);
-  color: white;
-  padding: 12px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
+/* FILTROS */
 .filtros {
   text-align: center;
   padding: 20px;
 }
 
 .filtros button {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: none;
   padding: 10px 15px;
   margin: 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
+.filtros button:hover {
+  background-color: var(--azul-claro);
+}
+
+/* PRODUCTOS */
 .productos {
-  padding: 40px 20px;
-}
-
-.grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .producto-card {
-  background: white;
+  border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  text-align: center;
 }
 
-.subtitulo {
-  color: #64748b;
-  font-size: 14px;
+.producto-card h2 {
+  color: var(--azul);
 }
 
-.precio {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
+/* BOTÓN */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--azul);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.destacado {
-  border: 2px solid var(--principal);
+.btn:hover {
+  background-color: var(--azul-claro);
 }
 
+/* WHATSAPP FLOTANTE */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background-color: #25D366;
   color: white;
-  padding: 15px;
+  font-size: 24px;
+  padding: 12px 15px;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 22px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #e5e7eb;
-}
