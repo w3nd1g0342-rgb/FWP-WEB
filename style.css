@@ -1,0 +1,96 @@
+:root {
+  --principal: #16a34a;   /* Verde bienestar */
+  --secundario: #0f172a;  /* Azul confianza */
+  --fondo: #f8fafc;
+  --texto: #020617;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+.hero {
+  background: var(--secundario);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--principal);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.filtros {
+  text-align: center;
+  padding: 20px;
+}
+
+.filtros button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.productos {
+  padding: 40px 20px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.producto-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.subtitulo {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.destacado {
+  border: 2px solid var(--principal);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e5e7eb;
+}

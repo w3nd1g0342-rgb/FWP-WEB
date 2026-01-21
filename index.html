@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FWP Chile | Bienestar y Energía</title>
+
+  <meta name="description"
+        content="Suplementos de bienestar y energía en Chile. Productos para digestión, belleza, control de peso y rendimiento diario. Compra directa vía WhatsApp.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/569XXXXXXXX" class="whatsapp-float" target="_blank">💬</a>
+
+  <!-- HERO / HEADER -->
+  <header class="hero">
+    <img src="assets/logo.png" alt="Logo FWP Chile" class="logo">
+    <h1>Bienestar inteligente para tu día a día</h1>
+    <p>Suplementos diseñados para energía, belleza y control de peso</p>
+    <a href="#productos" class="btn">Ver productos</a>
+  </header>
+
+  <!-- FILTROS -->
+  <section class="filtros">
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('digestivo')">Digestión & Peso</button>
+    <button onclick="filtrar('belleza')">Belleza</button>
+    <button onclick="filtrar('energia')">Energía</button>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="productos" id="productos">
+    <h2>Nuestros Productos</h2>
+
+    <div class="grid-productos">
+
+      <!-- LIV -->
+      <div class="producto-card digestivo">
+        <h3>LIV</h3>
+        <p class="subtitulo">Ligereza que fluye</p>
+        <p>Fibras y probióticos que apoyan la digestión y prolongan la saciedad.</p>
+        <p class="precio">$49.990 CLP</p>
+        <a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+      </div>
+
+      <!-- RENÖVA+ -->
+      <div class="producto-card belleza">
+        <h3>RENÖVA+</h3>
+        <p class="subtitulo">Dosis diaria de juventud</p>
+        <p>Colágeno, antioxidantes y vitaminas para piel, cabello y uñas.</p>
+        <p class="precio">$49.990 CLP</p>
+        <a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+      </div>
+
+      <!-- E-BOOST -->
+      <div class="producto-card energia">
+        <h3>E-BOOST</h3>
+        <p class="subtitulo">Impulso para tu día</p>
+        <p>Energía equilibrada con aminoácidos y extractos naturales.</p>
+        <p class="precio">$39.990 CLP</p>
+        <a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+      </div>
+
+      <!-- 24BURN -->
+      <div class="producto-card digestivo destacado">
+        <h3>24BURN</h3>
+        <p class="subtitulo">Acelera tu metabolismo</p>
+        <p>Activa el metabolismo, aumenta la saciedad y el rendimiento.</p>
+        <p class="precio">Desde $35.000 CLP</p>
+        <a href="https://wa.me/569XXXXXXXX" class="btn">Comprar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 FWP Chile</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
