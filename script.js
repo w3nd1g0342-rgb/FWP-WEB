@@ -1,6 +1,6 @@
-ffunction filtrar(cat){
+function filtrar(cat){
   document.querySelectorAll('.producto-card').forEach(p=>{
-    p.style.display = cat==='todos'||p.classList.contains(cat)?'block':'none';
+    p.style.display = (cat==='todos'||p.classList.contains(cat)) ? 'flex' : 'none';
   });
 }
 
@@ -17,6 +17,11 @@ function quitar(nombre){
   guardar(); render();
 }
 
+function vaciarCarrito(){
+  carrito = [];
+  guardar(); render();
+}
+
 function guardar(){
   localStorage.setItem('carrito', JSON.stringify(carrito));
 }
@@ -25,6 +30,7 @@ function render(){
   let cont = document.getElementById('carrito-items');
   let totalTxt = document.getElementById('total');
   let contador = document.getElementById('contador');
+
   cont.innerHTML = '';
   let total = 0, cant = 0;
 
@@ -52,8 +58,8 @@ function cerrarCarrito(){
 }
 
 function obtenerFormaPago(){
-  const p = document.querySelector('input[name="pago"]:checked');
-  return p ? p.value : 'No especificado';
+  const pago = document.querySelector('input[name="pago"]:checked');
+  return pago ? pago.value : 'No especificado';
 }
 
 function enviarWhatsApp(){
@@ -88,13 +94,11 @@ function enviarWhatsApp(){
   msg += `%0A%0A💰 Total final: $${total.toLocaleString('es-CL')}%0A%0AGracias 🙂`;
 
   window.open(`https://wa.me/56956156721?text=${msg}`, '_blank');
-
-  carrito = [];
-  guardar();
-  render();
+  vaciarCarrito();
 }
 
 render();
+
 
 
 
