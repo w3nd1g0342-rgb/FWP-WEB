@@ -1,53 +1,47 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Suplementos Premium en Chile | FWP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="header">
-  <img src="assets/logo.png" alt="FWP Chile" class="logo">
-</header>
-
-<!-- CARRITO FLOTANTE -->
-<div class="carrito-float" onclick="abrirCarrito()">
-  🛒 <span id="contador">0</span>
-</div>
-
-<section class="filtros">
-  <button onclick="filtrar('todos')">Todos</button>
-  <button onclick="filtrar('energia')">Energía</button>
-  <button onclick="filtrar('bienestar')">Bienestar</button>
-  <button onclick="filtrar('peso')">Control de peso</button>
-</section>
-
 <main class="productos">
+
   <div class="producto-card energia bienestar">
-    <h2>LIV</h2>
-    <p>Apoyo nutricional diario.</p>
-    <p><strong>$49.990</strong></p>
-    <button class="btn" onclick="agregarAlCarrito('LIV', 49990)">Agregar</button>
+    <img src="assets/eboost.png" alt="E-BOOST">
+    <div class="info">
+      <h2>E-BOOST</h2>
+      <p>Multivitamínico que aporta energía y concentración elevada de forma natural, exquisito sabor a mandarina.</p>
+      <p class="precio">$39.990</p>
+      <button class="btn" onclick="agregarAlCarrito('E-BOOST',39990)">Agregar</button>
+    </div>
   </div>
 
   <div class="producto-card bienestar">
-    <h2>RENÖVA+</h2>
-    <p>Piel, cabello y uñas.</p>
-    <p><strong>$49.990</strong></p>
-    <button class="btn" onclick="agregarAlCarrito('RENÖVA+', 49990)">Agregar</button>
+    <img src="assets/liv.png" alt="LIV">
+    <div class="info">
+      <h2>LIV</h2>
+      <p>Suplemento que aporta prebióticos y probióticos que brindan equilibrio a tu microbiota.</p>
+      <p class="precio">$49.990</p>
+      <button class="btn" onclick="agregarAlCarrito('LIV',49990)">Agregar</button>
+    </div>
   </div>
 
-  <div class="producto-card energia">
-    <h2>E-BOOST</h2>
-    <p>Energía y enfoque.</p>
-    <p><strong>$39.990</strong></p>
-    <button class="btn" onclick="agregarAlCarrito('E-BOOST', 39990)">Agregar</button>
+  <div class="producto-card bienestar">
+    <img src="assets/renova.png" alt="RENÖVA+">
+    <div class="info">
+      <h2>RENÖVA+</h2>
+      <p>Cuida articulaciones, huesos, uñas, cabello y mejora la elasticidad de la piel.</p>
+      <p class="precio">$49.990</p>
+      <button class="btn" onclick="agregarAlCarrito('RENÖVA+',49990)">Agregar</button>
+    </div>
   </div>
 
   <div class="producto-card peso energia">
-    <h2>24BUR
+    <img src="assets/24burn.png" alt="24BURN">
+    <div class="info">
+      <h2>24BURN</h2>
+      <p>Mezcla natural que impulsa energía, oxidación de grasas y saciedad.</p>
+      <p class="precio">$35.900</p>
+      <button class="btn" onclick="agregarAlCarrito('24BURN',35900)">Agregar</button>
+    </div>
+  </div>
+
+</main>
+
 
 
 
