@@ -3,82 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>Suplementos Premium en Chile | FWP</title>
-
-  <meta name="description" content="Compra suplementos premium en Chile. Energía, metabolismo, belleza y bienestar. Atención directa por WhatsApp. Envíos a todo Chile.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <img src="assets/logo.png" alt="FWP Chile" class="logo">
-  </header>
+<header class="header">
+  <img src="assets/logo.png" alt="FWP Chile" class="logo">
+</header>
 
-  <!-- FILTROS -->
-  <section class="filtros">
-    <button onclick="filtrar('todos')">Todos</button>
-    <button onclick="filtrar('energia')">Energía</button>
-    <button onclick="filtrar('bienestar')">Bienestar</button>
-    <button onclick="filtrar('peso')">Control de peso</button>
-  </section>
+<!-- CONTADOR CARRITO FLOTANTE -->
+<div class="carrito-float" onclick="abrirCarrito()">
+  🛒 <span id="contador">0</span>
+</div>
 
-  <!-- PRODUCTOS -->
-  <main class="productos">
+<section class="filtros">
+  <button onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('energia')">Energía</button>
+  <button onclick="filtrar('bienestar')">Bienestar</button>
+  <button onclick="filtrar('peso')">Control de peso</button>
+</section>
 
-    <div class="producto-card energia bienestar" onclick="abrirProducto('liv')">
-      <h2>LIV</h2>
-      <p class="precio">$39.990 CLP</p>
-      <p>Energía y apoyo nutricional diario.</p>
-      <button class="btn-secundario">Ver detalles</button>
-    </div>
-
-    <div class="producto-card bienestar" onclick="abrirProducto('renova')">
-      <h2>RENÖVA+</h2>
-      <p class="precio">$42.990 CLP</p>
-      <p>Piel, cabello y uñas desde el interior.</p>
-      <button class="btn-secundario">Ver detalles</button>
-    </div>
-
-    <div class="producto-card energia" onclick="abrirProducto('eboost')">
-      <h2>E-BOOST</h2>
-      <p class="precio">$36.990 CLP</p>
-      <p>Impulso de energía y enfoque.</p>
-      <button class="btn-secundario">Ver detalles</button>
-    </div>
-
-    <div class="producto-card peso energia" onclick="abrirProducto('burn')">
-      <h2>24BURN</h2>
-      <p class="precio">$41.990 CLP</p>
-      <p>Apoyo al metabolismo y quema de grasa.</p>
-      <button class="btn-secundario">Ver detalles</button>
-    </div>
-
-  </main>
-
-  <!-- MODAL -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="cerrar" onclick="cerrarProducto()">×</span>
-
-      <img id="modal-img" src="" alt="">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-precio" class="precio"></p>
-      <p id="modal-desc"></p>
-      <ul id="modal-specs"></ul>
-
-      <a id="modal-wpp" href="#" target="_blank" class="btn">
-        Comprar por WhatsApp
-      </a>
-    </div>
+<main class="productos">
+  <div class="producto-card energia bienestar">
+    <h2>LIV</h2>
+    <p>Apoyo nutricional diario.</p>
+    <p><strong>$49.990</strong></p>
+    <button class="btn" onclick="agregarAlCarrito('LIV', 49990)">Agregar</button>
   </div>
 
-  <!-- WHATSAPP FLOTANTE -->
-  <a href="https://wa.me/569XXXXXXXX?text=Hola%20quiero%20información%20sobre%20sus%20productos"
-     class="whatsapp-float" target="_blank">💬</a>
+  <div class="producto-card bienestar">
+    <h2>RENÖVA+</h2>
+    <p>Piel, cabello y uñas.</p>
+    <p><strong>$49.990</strong></p>
+    <button class="btn" onclick="agregarAlCarrito('RENÖVA+', 49990)">Agregar</button>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="producto-card energia">
+    <h2>E-BOOST</h2>
+    <p>Energía y enfoque.</p>
+    <p><strong>$39.990</strong></p>
+    <button class="btn" onclick="agregarAlCarrito('E-BOOST', 39990)">Agregar</button>
+  </div>
+
+  <div class="producto-card peso energia">
+    <h2>24BURN</h2>
+    <p>Control de peso.</p>
+    <p><strong>$35.000</strong></p>
+    <button class="btn" onclick="agregarAlCarrito('24BURN', 35000)">Agregar</button>
+  </div>
+</main>
+
+<!-- MODAL CARRITO -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarCarrito()">✖</span>
+    <h2>🛒 Tu carrito</h2>
+
+    <div id="carrito-items"></div>
+    <p id="total"></p>
+
+    <select id="tipoEntrega">
+      <option value="Despacho a domicilio">Despacho a domicilio</option>
+      <option value="Retiro en punto acordado">Retiro en punto acordado</option>
+    </select>
+
+    <button class="btn" onclick="enviarWhatsApp()">Finalizar por WhatsApp</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
 
