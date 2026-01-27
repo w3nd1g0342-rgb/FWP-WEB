@@ -9,7 +9,9 @@ body {
   text-align: center;
 }
 
-.logo { height: 60px; }
+.logo {
+  height: 60px;
+}
 
 .productos {
   display: grid;
@@ -27,7 +29,7 @@ body {
 
 .btn {
   background: #0A3D62;
-  color: #fff;
+  color: white;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
@@ -61,7 +63,7 @@ body {
   background: white;
   padding: 20px;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   margin: 10% auto;
   border-radius: 8px;
 }
@@ -74,6 +76,9 @@ body {
 .carrito-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 8px;
 }
+
+
 
