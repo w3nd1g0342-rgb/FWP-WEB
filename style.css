@@ -1,93 +1,52 @@
-:root {
-  --azul: #0A3D62;
-  --azul-claro: #1E90FF;
-  --negro: #111111;
-  --blanco: #ffffff;
-}
-
-/* GENERAL */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: var(--blanco);
-  color: var(--negro);
 }
 
-/* HEADER */
 .header {
-  background-color: var(--negro);
-  display: flex;
-  justify-content: center;
+  background: #111;
   padding: 15px;
-}
-
-.logo {
-  height: 60px;
-}
-
-/* FILTROS */
-.filtros {
   text-align: center;
-  padding: 20px;
 }
 
-.filtros button {
-  background-color: var(--azul);
-  color: var(--blanco);
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+.logo { height: 60px; }
 
-.filtros button:hover {
-  background-color: var(--azul-claro);
-}
-
-/* PRODUCTOS */
 .productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .producto-card {
   border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.producto-card:hover {
-  transform: scale(1.03);
-}
-
-.precio {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--azul);
+  border-radius: 8px;
 }
 
 .btn {
-  background-color: var(--azul);
-  color: var(--blanco);
-  padding: 10px 20px;
+  background: #0A3D62;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
   border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
 }
 
-.btn-secundario {
-  margin-top: 10px;
-  background: transparent;
-  color: var(--azul);
-  border: 2px solid var(--azul);
-  padding: 8px 15px;
-  border-radius: 5px;
+.carrito-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0A3D62;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#contador {
+  font-weight: bold;
 }
 
 /* MODAL */
@@ -95,40 +54,26 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 999;
+  background: rgba(0,0,0,0.5);
 }
 
 .modal-content {
-  background: var(--blanco);
-  max-width: 500px;
-  margin: 5% auto;
+  background: white;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 10% auto;
+  border-radius: 8px;
 }
 
-.modal-content img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: contain;
-}
-
-.cerrar {
+.close {
   float: right;
-  font-size: 24px;
   cursor: pointer;
 }
 
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  font-size: 24px;
-  padding: 12px 15px;
-  border-radius: 50%;
-  text-decoration: none;
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
+
